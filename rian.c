@@ -1,4 +1,5 @@
 // Nurian Satya Wardana
+// 1506717071
 
 #include <stdio.h>
 #include <stdlib.h>
