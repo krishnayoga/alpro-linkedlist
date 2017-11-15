@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "append.h"
+/*
+Fadel Erian Saffiq
+1506717235
+*/
 struct tes{
 	int a;
 	struct tes *next;
