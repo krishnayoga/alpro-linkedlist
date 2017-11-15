@@ -51,7 +51,7 @@ int main() {
 	
 	// Menambah nilai baru pada sisi depan linked list
 	push(&depan, 20);
-	append(&belakang, 11);
+	//append(&belakang, 11);
 	insert(&depan, &belakang, 10);
 	
 	printNode(depan);
