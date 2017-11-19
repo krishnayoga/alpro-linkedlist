@@ -80,6 +80,7 @@ int main(){
 	}
 	
  	display();
+ 	displayMem();
 }
 
 void display(){
@@ -91,6 +92,16 @@ void display(){
    		new_node=new_node->next;
    	}
   	printf("NULL");
+}
+
+void displayMem() {
+	struct node *new_node;
+ 	printf("\n\nIsi memori:\n");
+ 	new_node=start;
+ 	while(new_node!=NULL){
+   		printf("%p -> %d\n", new_node, new_node->data);
+   		new_node=new_node->next;
+   	}
 }
 
 void push(){
