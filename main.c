@@ -4,6 +4,7 @@
 #include "push.h"
 #include "append.h"
 #include "insert.h"
+#include "delete.h"
 
 void display();
 
