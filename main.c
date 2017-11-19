@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
-#include "insert.h"
+#include "push.h"
+#include "append.h"
 
 void display();
 

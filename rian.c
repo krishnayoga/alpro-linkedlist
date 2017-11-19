@@ -4,10 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Node {
+typedef struct Simpul {
 	int data;
-	struct Node *next;
+	struct Simpul *next;
 } node;
+
 
 void push(node **depan, int data) {
 	node *temp = (node*)malloc(sizeof(node));
@@ -17,42 +18,44 @@ void push(node **depan, int data) {
 	*depan = temp;
 }
 
-void insert(node **depan, node **belakang, int data) {
-	node *temp = (node*)malloc(sizeof(node));
-	temp->data = data;
-	
-	(*depan)->next = temp;
-	temp->next = *belakang;
-}
 
-void append(node **belakang, int data) {
+void appendByRian(node **depan, int data) {
+	node *simpul = *depan;
 	node *temp = (node*)malloc(sizeof(node));
 	temp->data = data;
 	temp->next = NULL;
-	(*belakang)->next = temp;
-	*belakang = temp;
+    
+    if (*depan != NULL) {
+    	while (simpul->next != NULL) simpul = simpul->next;
+    	simpul->next = temp; 	
+	}
+	
+	else *depan = temp;   
 }
 
+
 void printNode(node *simpul) {
+	int count = 0;
+	
 	while (simpul != NULL) {
-		printf("%d\n", simpul->data);
+		count++;
+		printf("Simpul %d -> %d\n", count, simpul->data);
 		simpul = simpul->next;
 	}
 }
 
 int main() {
-	// deklarasi pointer depan dan belakang yang nantinya berisi
-	// struct berjenis node
-	node *depan, *belakang;
+	// deklarasi "depan" yang nantinya berisi pointer
+	// menuju node
+	node *depan;
 	
 	// Saat program baru berjalan, depan dan belakang belum
 	// menunjuk ke memori mana-mana
-	depan = belakang = NULL;
+	depan = NULL;
 	
 	// Menambah nilai baru pada sisi depan linked list
 	push(&depan, 20);
-	//append(&belakang, 11);
-	insert(&depan, &belakang, 10);
+	append(&depan, 11);
 	
 	printNode(depan);
 }
