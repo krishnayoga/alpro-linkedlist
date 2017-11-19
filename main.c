@@ -2,7 +2,7 @@
 Ida Bagus Krishna Yoga Utama - 1506716983
 Nurian Satya Wardana - 1506717071
 Fadel Erian Saffiq - 1506717235
-Akmal Hugo Prasetyo - 
+Akmal Hugo Prasetyo - 1506746973
 */
 
 #include <stdio.h>
@@ -89,7 +89,7 @@ void display(){
  	while(new_node!=NULL){
    		printf("%d-->",new_node->data);
    		new_node=new_node->next;
-   }
+   	}
   	printf("NULL");
 }
 
@@ -138,11 +138,11 @@ void insert(){
     else{
        	temp = start;
         
-		for(i=1;i< pos-1;i++){
-    		temp = temp->next;
-        }
+	for(i=1;i< pos-1;i++){
+    	temp = temp->next;
+    	}
        
-	   	temp1=temp->next;
+	temp1=temp->next;
        	temp->next = new_node;
        	new_node->next=temp1;
     }
