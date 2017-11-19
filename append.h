@@ -9,7 +9,7 @@ void printList();
 
 void append(struct node** head_ref, int new_data) {
     /* 1. allocate node */
-    struct node* new_node = (struct tes*) malloc(sizeof(struct tes));
+    struct node* new_node = (struct node*) malloc(sizeof(struct node));
  
     struct node *last = *head_ref;  /* used in step 5*/
  

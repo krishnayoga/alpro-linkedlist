@@ -3,6 +3,7 @@
 #include <malloc.h>
 #include "push.h"
 #include "append.h"
+#include "insert.h"
 
 void display();
 

@@ -7,7 +7,7 @@ void appendAlt();
 
 
 void push(struct node **depan, int data) {
-	struct node *temp = (node*)malloc(sizeof(node));
+	struct node *temp = (struct node*)malloc(sizeof(struct node));
 	temp->data = data;
 	if (*depan != NULL) temp->next = *depan; 
 	else temp->next = NULL;
@@ -17,7 +17,7 @@ void push(struct node **depan, int data) {
 
 void appendAlt(struct node **depan, int data) {
 	struct node *simpul = *depan;
-	struct node *temp = (node*)malloc(sizeof(node));
+	struct node *temp = (struct node*)malloc(sizeof(struct node));
 	temp->data = data;
 	temp->next = NULL;
     
